@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+
+$dark: #1d1d1d;
+$light: #ededed;
+
+body {
+	background: $dark;
+	color: $light;
+	font-family: sans-serif;
+}
+
+.focus--keyboard:focus {
+	outline: -webkit-focus-ring-color auto 5px;
+}
+.focus--mouse:focus {
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+	-webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+	outline: none !important;
+}
+
+.wrap {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: row wrap;
+}
+
+.content {
+	max-width: 570px;
+
+	// Test autoprefixer
+	transform: translate(0%, 0%);
+
+	img {
+		max-width: 300px;
+	}
+
+	p {
+		margin-top: 0;
+		margin-bottom: 5rem;
+	}
+}

@@ -1,41 +1,22 @@
-$dark: #1d1d1d;
-$light: #ededed;
+@charset 'UTF-8';
 
-body {
-	background: $light;
-	color: $dark;
-	font-family: sans-serif;
-}
+// 1. Configuration and helpers
+@import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins';
 
-.focus--keyboard:focus {
-	outline: -webkit-focus-ring-color auto 5px;
-}
-.focus--mouse:focus {
-	-webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
-	-webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
-	outline: none !important;
-}
+// 2. Vendors
+@import 'vendors/normalize';
 
-.wrap {
-	min-height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-flow: row wrap;
-}
+// 3. Base stuff
+@import 'base/base', 'base/fonts', 'base/typography', 'base/helpers';
 
-.content {
-	max-width: 570px;
+// 4. Layout-related sections
+@import 'layout/header', 'layout/footer';
 
-	// Test autoprefixer
-	transform: translate(0%, 0%);
+// 5. Components
+@import 'components/button';
 
-	img {
-		max-width: 300px;
-	}
+// 6. Page-specific styles
+@import 'pages/home';
 
-	p {
-		margin-top: 0;
-		margin-bottom: 5rem;
-	}
-}
+// 7. Themes
+@import 'themes/default';
