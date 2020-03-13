@@ -28,3 +28,5 @@ tmp/
 # Brunch output folder.
 public/
 dist/
+
+pnp.js

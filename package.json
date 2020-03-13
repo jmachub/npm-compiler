@@ -36,14 +36,13 @@
 		"clean:code": "rimraf $npm_package_config_out/{css,js}",
 		"clean": "run-s clean:*",
 		"copy:fonts": "cp -a src/assets/fonts $npm_package_config_out/assets",
-		"copy:assets": "cp -a src/assets/{fonts,img,svg} $npm_package_config_out/assets",
 		"build:css": "run-s scss prefix",
 		"build:js": "run-s terser",
 		"build:assets": "run-s imagemin svgo copy:fonts",
 		"build:markup": "html-minifier --input-dir src/ --output-dir dist/ --collapse-whitespace --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --file-ext html",
 		"watch:css": "node-sass --output-style=expanded --source-map=true src/scss/main.scss src/css/main.css --recursive --w",
 		"watch": "run-p watch:* server ",
-		"build": "mkdirp $npm_package_config_out && run-s clean build:* copy:fonts copy:assets"
+		"build": "mkdirp $npm_package_config_out && run-s clean build:*"
 	},
 	"devDependencies": {
 		"autoprefixer": "^9.7.4",
